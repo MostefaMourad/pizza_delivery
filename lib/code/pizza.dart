@@ -1,4 +1,5 @@
-class piza{
+
+class pizza{
 
 static List<String> sizes = <String>["small","medium","large"];
 String size = sizes.elementAt(0);

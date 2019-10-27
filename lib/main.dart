@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MaterialApp(
-  home:MyApp()));
+void main() => runApp(MyApp(),);
 
-  class MyApp extends StatefulWidget{
-    @override
-  _MyAppState createState() {
-     return new _MyAppState();
-  }
-  }
-
-class _MyAppState extends State<StatefulWidget> {
+  class MyApp extends StatelessWidget{
+    
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Colors.deepOrange,
-        title: new Text('Pizza Delivery App'),
-      ),
-      body: new Container(
-       
-      ),
-      );
+    return new MaterialApp(
+      title: 'Navigation',
+       routes: <String, WidgetBuilder > {
+       '/Home' :(BuildContext context) => new Home(), 
+       '/Order' :(BuildContext context) => new Home(), 
+       '/Review' :(BuildContext context) => new Home(), 
+  },
+    );
   }
 }

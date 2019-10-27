@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pizza_delivery/code/pizza.dart';
 
 class Review extends StatelessWidget {
-  Pizza _pizzaOrder ;
+  pizza _pizzaOrder ;
   List<String> _list = new List<String>();
 // This constructor is used to initialise the variables in this class
   Review({order:null}){
