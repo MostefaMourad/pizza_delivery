@@ -16,6 +16,12 @@ class _OrderState extends State<Order> {
      _pizzaOrder.size=size; 
     });
   }
+  void setToppings(bool value,int ind){
+    setState(() {
+     String key = _pizzaOrder.toppings.keys.elementAt(ind);
+     _pizzaOrder.toppings[key]=value; 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -35,6 +41,25 @@ class _OrderState extends State<Order> {
             }).toList(),
             onChanged: (String value){setSize(value);},
           ),
+          new Expanded(
+            child: new ListView.builder(
+              shrinkWrap: true,
+              itemCount: _pizzaOrder.toppings.length,
+              itemBuilder: (BuildContext context,int index){
+                return new CheckboxListTile(
+                  controlAffinity: ListTileControlAffinity.leading,
+                  title: new Text(_pizzaOrder.toppings.keys.elementAt(index)),
+                  value: _pizzaOrder.toppings.values.elementAt(index),
+                  onChanged: (){
+                  },
+                )
+              },
+            ),
+          ),
+          new RaisedButton(
+            child: new Text('continue'),
+            onPressed: (){},
+            )
         ],
          
       ),),
