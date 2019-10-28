@@ -32,7 +32,7 @@ class _OrderState extends State<Order> {
                    new Text('Size : ' + size1)
                  ],),
                );
-            }),
+            }).toList(),
             onChanged: (String value){setSize(value);},
           ),
         ],
