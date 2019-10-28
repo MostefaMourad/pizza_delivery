@@ -20,7 +20,7 @@ class _OrderState extends State<Order> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(title: new Text('Order Pizza'),),
-      body: new Container(padding: new EdgeInsets.all(32.0),
+      body: new Center( child : new Container(padding: new EdgeInsets.all(32.0),
         child: new Column(children: <Widget>[
           new DropdownButton<String>(
             value: _pizzaOrder.size,
@@ -38,6 +38,7 @@ class _OrderState extends State<Order> {
         ],
          
       ),),
-    ) ;
+    )
+    );
   }
 } 
