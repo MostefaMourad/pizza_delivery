@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_delivery/code/pizza.dart';
+import 'package:pizza_delivery/screens/review.dart';
 
 class Order extends StatefulWidget{
   @override
@@ -59,7 +60,13 @@ class _OrderState extends State<Order> {
           ),
           new RaisedButton(
             child: new Text('continue'),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(context,
+              new MaterialPageRoute(
+                builder : (BuildContext context) => new Review(order :_pizzaOrder) 
+              ) 
+              );
+            },
             )
         ],
          
