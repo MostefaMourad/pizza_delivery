@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_delivery/screens/home.dart';
+import 'package:pizza_delivery/screens/order.dart';
+import 'package:pizza_delivery/screens/review.dart';
 
 void main() => runApp(MyApp(),);
 
@@ -10,9 +13,10 @@ void main() => runApp(MyApp(),);
       title: 'Navigation',
        routes: <String, WidgetBuilder > {
        '/Home' :(BuildContext context) => new Home(), 
-       '/Order' :(BuildContext context) => new Home(), 
-       '/Review' :(BuildContext context) => new Home(), 
-  },
+       '/Order' :(BuildContext context) => new Order(), 
+       '/Review' :(BuildContext context) => new Review(), 
+      },
+      home: new Home(),
     );
   }
 }
