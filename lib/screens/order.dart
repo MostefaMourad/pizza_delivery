@@ -22,7 +22,7 @@ class _OrderState extends State<Order> {
       appBar: new AppBar(title: new Text('Order Pizza'),),
       body: new Container(padding: new EdgeInsets.all(32.0),
         child: new Column(children: <Widget>[
-          new DropdownButton(
+          new DropdownButton<String>(
             value: _pizzaOrder.size,
             items: pizza.sizes.map((String size1){
                return new DropdownMenuItem(
