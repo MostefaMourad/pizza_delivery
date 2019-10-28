@@ -50,9 +50,10 @@ class _OrderState extends State<Order> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: new Text(_pizzaOrder.toppings.keys.elementAt(index)),
                   value: _pizzaOrder.toppings.values.elementAt(index),
-                  onChanged: (){
+                  onChanged: (bool val){
+                   setToppings(val, index);
                   },
-                )
+                );
               },
             ),
           ),
